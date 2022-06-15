@@ -14,7 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 
     @GetMapping
-    public String main(Model model){
+    public String main(){
         return "index";
+    }
+
+    @GetMapping("/elements")
+    public String elements(){
+        return "elements";
     }
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:replace="${title}">레이아웃 타이틀</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <div th:replace="layout/header :: common_header">
+                <p>레이아웃 헤더</p>
+            </div>
+
+            <div th:replace="${content}">
+                <p>레이아웃 컨텐츠</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form method="post" action="#">
+                    <input type="text" name="query" id="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <div th:replace="layout/menu :: common_menu">
+                <p>레이아웃 메뉴</p>
+            </div>
+
+            <!-- Section -->
+            <div th:replace="layout/bottomMenu :: common_bottom_menu">
+                <p>레이아웃 하단 메뉴</p>
+            </div>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>임시</p>
+                <ul class="contact">
+                    <li class="icon solid fa-envelope"><a href="#">jeongdalma@gmail.com</a></li>
+                    <li class="icon solid fa-phone">010-1111-2222</li>
+                    <li class="icon solid fa-home">A<br>B</li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
