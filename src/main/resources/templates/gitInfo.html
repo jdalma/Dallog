@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html th:replace="~{layout/layout :: layout(~{::title}, ~{::section})}"
+	  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Git Info</title>
+	</head>
+	<body>
+		<section>
+			<form th:action th:object="${readme}" method="post">
+				<div>
+					<label>Content</label>
+					<textarea th:field="*{data}" class="form-control"></textarea>
+				</div>
+			</form>
+		</section>
+	</body>
+</html>

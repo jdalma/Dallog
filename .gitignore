@@ -18,6 +18,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
+GIT_INFO.java
 .idea
 *.iws
 *.iml
