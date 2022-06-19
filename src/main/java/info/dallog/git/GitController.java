@@ -66,7 +66,7 @@ public class GitController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("accept" , "application/vnd.github.v3+json");
-        headers.set("Authorization" , "token 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");
+        headers.set("Authorization" , "token {Personal Access Token}");
 //        headers.set("Authorization" , "token " + dto.getAccess_token());
 
         Map<String, String> map = new HashMap<>();
