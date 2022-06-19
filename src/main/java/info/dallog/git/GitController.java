@@ -66,11 +66,11 @@ public class GitController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("accept" , "application/vnd.github.v3+json");
-        headers.set("Authorization" , "token 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");
+        headers.set("Authorization" , "token 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");
 //        headers.set("Authorization" , "token " + dto.getAccess_token());
 
         Map<String, String> map = new HashMap<>();
-        map.put("title" , "API ISSUE TEST");
+        map.put("title" , LocalDateTime.now() + " API ISSUE TEST");
         map.put("body" , LocalDateTime.now() + " 테스트");
 
         HttpEntity request = new HttpEntity(map , headers);
