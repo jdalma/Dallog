@@ -1,4 +1,4 @@
-package info.dallog.main;
+package info.dallog.web;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

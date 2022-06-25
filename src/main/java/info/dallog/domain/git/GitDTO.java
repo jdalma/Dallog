@@ -1,4 +1,4 @@
-package info.dallog.git;
+package info.dallog.domain.git;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
