@@ -1,11 +1,8 @@
-package info.dallog.domain.git;
+package info.dallog.git.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-
-import java.util.Map;
 
 @Getter
 @Setter

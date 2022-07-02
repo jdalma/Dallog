@@ -1,8 +1,8 @@
-package info.dallog.web;
+package info.dallog.git.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import info.dallog.domain.git.GIT_INFO;
-import info.dallog.domain.git.GitDTO;
+import info.dallog.git.domain.entity.GIT_INFO;
+import info.dallog.git.domain.entity.GitDTO;
 import info.dallog.common.SingleTonRestTemplate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
