@@ -5,20 +5,33 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.LockModeType;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
+@Transactional
 public class BookmarkRepository {
 
     private final EntityManager em;
 
-    public void save(Bookmark bookmark){
-        em.persist(bookmark);
+    public Long save(Bookmark bookmark){
+        if(bookmark.getId() == null){
+            em.persist(bookmark);
+        }
+        else{
+            em.merge(bookmark);
+        }
+        return bookmark.getId();
     }
 
     public Bookmark findOne(Long id){
         return em.find(Bookmark.class , id);
+    }
+
+    public Bookmark findOneLock(Long id){
+        return em.find(Bookmark.class , id , LockModeType.PESSIMISTIC_WRITE);
     }
 
     public List<Bookmark> findAll(){

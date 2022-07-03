@@ -10,7 +10,7 @@ import javax.persistence.Embeddable;
 @AllArgsConstructor
 public class Uri {
     private String domain;
-    private String parameter;
+    private String path;
 
     public Uri() {
 

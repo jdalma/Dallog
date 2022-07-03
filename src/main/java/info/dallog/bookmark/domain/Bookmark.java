@@ -2,6 +2,8 @@ package info.dallog.bookmark.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -9,6 +11,7 @@ import java.util.Date;
 @Entity
 @Getter
 @Setter
+@ToString
 public class Bookmark {
     @Id
     @GeneratedValue
@@ -21,6 +24,8 @@ public class Bookmark {
 
     private boolean star;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @CreationTimestamp
     private Date createTimestamp;
+
+    public Bookmark(){}
 }

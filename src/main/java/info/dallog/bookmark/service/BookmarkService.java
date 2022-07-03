@@ -15,15 +15,21 @@ public class BookmarkService {
 
     private final BookmarkRepository bookmarkRepository;
 
-    public Bookmark save(Bookmark bookmark){
-        bookmarkRepository.save(bookmark);
-        return bookmark;
+    public Long save(Bookmark bookmark){
+        return bookmarkRepository.save(bookmark);
+    }
+
+    public Bookmark findOne(Long id){
+        return bookmarkRepository.findOne(id);
+    }
+
+    public Bookmark findOneLock(Long id){
+        return bookmarkRepository.findOneLock(id);
     }
 
     public List<Bookmark> findBookmarks(){
         return bookmarkRepository.findAll();
     }
-
     public List<Bookmark> findByName(String name){
         return bookmarkRepository.findByName(name);
     }
