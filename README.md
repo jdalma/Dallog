@@ -15,6 +15,11 @@
   
 ***
 
-## ❌ **Spring PSA**를 활용한 Github AccessToken 테스트 코드 작성하기
-## ✅ Bookmark 도메인 추가 및 JPA ↔︎ MySQL 연동 테스트
-## ✅ MySQL 트랜잭션 격리 수준에 따른 문제점 테스트 코드 작성
+- [X] Bookmark 도메인 추가 및 JPA ↔︎ MySQL 연동 테스트
+- [ ] **Spring PSA**를 활용한 Github AccessToken 테스트 코드 작성하기
+- [ ] 회원 및 로그인 개발
+- [ ] `Message`와 `Validation` 적용
+- [ ] `HttpSession` 적용
+- [ ] **JWT** 적용
+- [ ] Bookmark 개발
+- [ ] 예외 및 요청 로그 개발
